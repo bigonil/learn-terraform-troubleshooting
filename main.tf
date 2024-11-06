@@ -5,7 +5,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = ">= 3.70.0"
+      version = ">= 5.70.0"
     }
   }
   required_version = ">= 0.15.2"
@@ -13,6 +13,7 @@ terraform {
 
 provider "aws" {
   region = var.region
+  profile = "lb-aws-admin"
 }
 
 data "aws_ami" "ubuntu" {
