@@ -5,7 +5,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = ">= 3.24.1"
+      version = ">= 3.70.0"
     }
   }
   required_version = ">= 0.15.2"
@@ -49,7 +49,7 @@ resource "aws_instance" "web_app" {
               systemctl restart apache2
               EOF
  tags = {
-    Name = $var.name-learn
+    Name = "${var.name}-learn"
   }
 }
 
